@@ -1,0 +1,119 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 98%;
+    max-width: 960px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 1.5em 0;
+    background: linear-gradient(30deg, #f6bb73 0%, white 50%, #f6bb73 100%);
+}
+header img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+}
+header h2, header h3 {
+    margin-top: 10px;
+}
+
+/* Navigation Styles */
+#nav_menu ul {
+    list-style: none;
+    text-align: center;
+}
+#nav_menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+#nav_menu ul li a {
+    text-decoration: none;
+    color: #931420;
+}
+#mobile_menu {
+    display: none;
+}
+
+/* Section and Aside Styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+section, aside {
+    padding: 20px;
+    flex: 1 1 calc(50% - 40px);
+    margin: 10px;
+}
+aside div {
+    column-count: 2;
+    column-gap: 20px;
+}
+aside h3, aside img {
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header img {
+        float: none;
+    }
+    header, section, aside {
+        text-align: center;
+    }
+    section, aside {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 90%;
+    }
+    #nav_menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+        background-color: #800000 !important;
+    }
+    header img {
+        float: none;
+    }
+    article img {
+        max-width: 30%;
+        display: block;
+        margin: 0 auto;
+    }
+    section, aside {
+        padding: 10px;
+        width: 100%;
+    }
+    aside div {
+        column-count: 1;
+    }
+}
